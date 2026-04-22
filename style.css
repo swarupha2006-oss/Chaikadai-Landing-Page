@@ -1,0 +1,270 @@
+:root {
+    --primary: #FF9933; /* Saffron */
+    --secondary: #3B7A57; /* Leaf Green */
+    --bg: #FFF8E7; /* Warm Cream Background */
+    --white: #ffffff;
+    --dark: #2D2D2D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 5%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 5px solid #3B7A57; /* Leaf Green */
+}
+
+
+.logo {
+    font-family: 'Rowdies', cursive; /* A bold, chunky font */
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* The "Painted" Look: Yellow text with a thick Red "stroke" shadow */
+    color: #FFD700; /* Bright Chrome Yellow */
+    text-shadow: 
+        3px 3px 0px #d32f2f,  /* Red shadow */
+        -1px -1px 0px #000;   /* Thin black outline for contrast */
+    
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #ffffff; /* White for the second half */
+    text-shadow: 
+        3px 3px 0px #3B7A57, /* Green shadow for the 'Kadai' part */
+        -1px -1px 0px #000;
+}
+
+.logo:hover {
+    transform: rotate(-3deg) scale(1.1); /* Tilts like a hand-hung sign board */
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('./images/idli1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Rowdies', cursive;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.btn-main {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4);
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    background: #e68a00;
+}
+
+/* How It Works - Cartoon Style */
+.how-it-works {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+
+.section-title {
+    font-family: 'Rowdies', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--secondary);
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.step-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    width: 300px;
+    border: 3px solid var(--dark); /* Cartoonish thick border */
+    box-shadow: 8px 8px 0px var(--dark); /* Pop-art shadow */
+    transition: 0.3s;
+}
+
+.step-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--primary);
+}
+
+.cartoon-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+/* Menu Grid */
+.menu {
+    padding: 80px 5%;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.food-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.menu-card:hover .food-img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    margin-top: 15px;
+}
+
+.reviews {
+    padding: 80px 5%;
+    background-color: var(--bg);
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-note {
+    background: var(--white);
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.review-note:hover {
+    transform: rotate(2deg) scale(1.05);
+    border: 2px solid var(--primary);
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a; /* Soft charcoal instead of harsh black */
+    color: #fdf5e6; /* Old Lace white - easier on the eyes */
+    padding: 60px 5% 30px;
+    border-top: 5px solid var(--primary); /* That Saffron line to tie it all together */
+}
+
+.footer-bottom p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 30px;
+}
+
+/* A small heartbeat animation for the heart icon */
+.fa-heart {
+    color: #ff4d4d;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover { color: var(--primary); }
+
+
+/* Responsive Fix for Mobile (375px) */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .footer-container { flex-direction: column; text-align: center; }
+}
